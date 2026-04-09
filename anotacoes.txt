@@ -1,0 +1,19 @@
+#pesquisa rápida das prinmicpais habilidades de um dev junior.
+Que massa! Esse é o momento em que a "chave vira". Você está parando de ver apenas comandos soltos e começando a entender o fluxo real de como um software é construído e entregue.
+Para consolidar esse entendimento, tente visualizar esses termos como peças de uma linha de produção:
+
+    CRUD (O Coração): É o que você constrói. Quase todo sistema (Instagram, banco, e-commerce) é um grande CRUD (Criar, Ler, Atualizar e Deletar dados). Se você sabe fazer um CRUD, você sabe fazer a base de qualquer produto.
+    GIT (A Máquina do Tempo): Enquanto você constrói seu CRUD, o Git salva cada passo. Se você fizer uma besteira no código, você volta no tempo. Se precisar trabalhar com alguém, o Git junta o código de vocês.
+    TESTES AUTOMATIZADOS (O Controle de Qualidade): Antes de dizer que o CRUD está pronto, você roda os testes. Eles verificam se o "Criar" realmente cria e se o "Deletar" não apaga o que não deve. É o que te dá sono tranquilo.
+    LINUX (O Operário): É onde o seu código vai "morar". A maioria dos servidores fala Linux. Entender o terminal é saber conversar com o computador que vai manter seu sistema vivo 24h por dia.
+    DEPLOY (O Lançamento): É o ato final. É pegar o seu código (que passou pelos testes e está salvo no Git) e colocar no servidor (Linux) para que o mundo possa acessar via internet.
+
+O próximo passo lógico:
+Agora que esses termos fazem sentido, o melhor jeito de fixar é fazer um projeto ponta a ponta:
+
+    Crie um CRUD simples (ex: um gerenciador de tarefas).
+    Suba para o GitHub usando Git.
+    Escreva 2 ou 3 testes básicos.
+    Tente fazer o Deploy (em lugares gratuitos como Render, Fly.io ou Vercel).
+
+Qual desses cinco termos você acha que é o seu maior "desafio" prático hoje?
