@@ -1,0 +1,265 @@
+================================================================================
+               TRATAMENTO DE DADOS - JAVASCRIPT #06
+                          RESUMO DA AULA
+================================================================================
+
+================================================================================
+                        CONCEITOS APRENDIDOS
+================================================================================
+
+1. VARIÁVEIS E DECLARAÇÃO
+   - var, let e const (diferenças abordadas brevemente)
+   - Uso para armazenar dados na memória
+
+2. TIPOS PRIMITIVOS
+   - number: números inteiros e reais
+   - string: cadeias de caracteres (texto)
+   - boolean: verdadeiro ou falso
+   - null: valor nulo
+   - undefined: valor indefinido
+   - object: objetos
+
+3. ENTRADA DE DADOS
+   - window.prompt() - captura entrada do usuário via popup
+
+4. CONVERSÃO DE TIPOS (TYPE CASTING)
+   - parseInt()    -> converte para número inteiro
+   - parseFloat()  -> converte para número real (ponto flutuante)
+   - Number()      -> conversão automática (inteiro ou real)
+
+5. CONCATENAÇÃO vs ADIÇÃO
+   - O operador + pode SOMAR números ou CONCATENAR strings
+   - Depende do tipo de dado de cada lado da operação
+
+6. TEMPLATE STRINGS (INTERPOLAÇÃO)
+   - Uso de crases ` ` e ${} para inserir variáveis em strings
+   - Forma mais limpa e moderna de formatar textos
+
+7. MÉTODOS DE STRING
+   - .length          -> quantidade de caracteres
+   - .toUpperCase()   -> tudo maiúsculo
+   - .toLowerCase()   -> tudo minúsculo
+
+8. SAÍDA DE DADOS
+   - alert()              -> popup simples
+   - document.write()     -> escreve diretamente no HTML
+
+9. FORMATAÇÃO DE NÚMEROS
+   - .toFixed()           -> define quantidade de casas decimais
+   - toLocaleString()     -> formata conforme localidade (moeda, data, etc.)
+
+
+================================================================================
+                        COMANDOS APRENDIDOS
+================================================================================
+
+┌─────────────────────┬─────────────────────────────────────────────────────┐
+│ CATEGORIA           │ COMANDO E EXEMPLO                                   │
+├─────────────────────┼─────────────────────────────────────────────────────┤
+│ ENTRADA             │ let nome = prompt("Qual seu nome?")                 │
+├─────────────────────┼─────────────────────────────────────────────────────┤
+│ CONVERSÃO           │ let n1 = parseInt(prompt("Número:"))               │
+│                     │ let n2 = parseFloat(prompt("Número:"))             │
+│                     │ let n = Number(prompt("Número:"))                  │
+├─────────────────────┼─────────────────────────────────────────────────────┤
+│ SAÍDA               │ alert("Olá!")                                      │
+│                     │ document.write("Texto")                            │
+├─────────────────────┼─────────────────────────────────────────────────────┤
+│ STRING              │ nome.length                                        │
+│                     │ nome.toUpperCase()                                 │
+│                     │ nome.toLowerCase()                                 │
+├─────────────────────┼─────────────────────────────────────────────────────┤
+│ TEMPLATE STRING     │ `Olá ${nome}`                                      │
+├─────────────────────┼─────────────────────────────────────────────────────┤
+│ NÚMEROS             │ n.toFixed(2)                                       │
+│                     │ n.toLocaleString('pt-BR', {style: 'currency',      │
+│                     │ currency: 'BRL'})                                  │
+└─────────────────────┴─────────────────────────────────────────────────────┘
+
+
+================================================================================
+                        EXERCÍCIOS PARA TREINAR
+================================================================================
+
+EXERCÍCIO 1 - COLETA E EXIBIÇÃO DE DADOS
+-----------------------------------------
+Objetivo: Praticar prompt() e alert() ou document.write()
+
+Instruções:
+1. Peça o nome do usuário com prompt()
+2. Peça a idade do usuário com prompt()
+3. Exiba uma frase como: "Olá Maria, você tem 25 anos."
+
+Código base:
+-------------------------------------------------------------------------------
+let nome = prompt("Qual é o seu nome?")
+let idade = prompt("Qual é a sua idade?")
+
+alert("Olá " + nome + ", você tem " + idade + " anos.")
+// ou usando template string:
+alert(`Olá ${nome}, você tem ${idade} anos.`)
+-------------------------------------------------------------------------------
+
+
+EXERCÍCIO 2 - CONVERSÃO DE TIPOS (SOMA)
+----------------------------------------
+Objetivo: Praticar conversão de string para número
+
+Instruções:
+1. Peça dois números com prompt()
+2. Converta-os usando Number()
+3. Mostre o resultado da soma
+4. Teste também com parseInt() e parseFloat()
+
+Código base:
+-------------------------------------------------------------------------------
+let n1 = Number(prompt("Digite o primeiro número:"))
+let n2 = Number(prompt("Digite o segundo número:"))
+
+let soma = n1 + n2
+
+alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`)
+-------------------------------------------------------------------------------
+
+
+EXERCÍCIO 3 - CONCATENAÇÃO vs TEMPLATE STRING
+----------------------------------------------
+Objetivo: Comparar as duas formas de formatar strings
+
+Instruções:
+1. Repita o exercício 2
+2. Faça uma versão usando concatenação com +
+3. Faça outra versão usando template string com crases ` ` e ${}
+
+Concatenação:
+-------------------------------------------------------------------------------
+alert("A soma entre " + n1 + " e " + n2 + " é igual a " + soma)
+-------------------------------------------------------------------------------
+
+Template string:
+-------------------------------------------------------------------------------
+alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`)
+-------------------------------------------------------------------------------
+
+
+EXERCÍCIO 4 - MANIPULAÇÃO DE STRINGS
+-------------------------------------
+Objetivo: Praticar os métodos de string
+
+Instruções:
+1. Peça o nome do usuário
+2. Exiba:
+   a) Quantas letras tem (length)
+   b) O nome em maiúsculas (toUpperCase)
+   c) O nome em minúsculas (toLowerCase)
+
+Código base:
+-------------------------------------------------------------------------------
+let nome = prompt("Digite seu nome:")
+
+document.write(`Seu nome é ${nome}<br>`)
+document.write(`Seu nome tem ${nome.length} letras<br>`)
+document.write(`Seu nome em maiúsculas: ${nome.toUpperCase()}<br>`)
+document.write(`Seu nome em minúsculas: ${nome.toLowerCase()}<br>`)
+-------------------------------------------------------------------------------
+
+
+EXERCÍCIO 5 - FORMATAÇÃO DE NÚMEROS
+-----------------------------------
+Objetivo: Praticar .toFixed() e toLocaleString()
+
+Instruções:
+1. Peça um número decimal (ex: 1543.5)
+2. Exiba:
+   a) O número com duas casas decimais usando .toFixed(2)
+   b) O número formatado como moeda brasileira (R$)
+
+Código base:
+-------------------------------------------------------------------------------
+let numero = Number(prompt("Digite um número decimal:"))
+
+// Com duas casas decimais
+document.write(`Número com 2 casas: ${numero.toFixed(2)}<br>`)
+
+// Formatado como moeda brasileira
+let moeda = numero.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+})
+document.write(`Valor em reais: ${moeda}<br>`)
+-------------------------------------------------------------------------------
+
+
+EXERCÍCIO 6 - DESAFIO FINAL (TUDO JUNTO)
+-----------------------------------------
+Objetivo: Aplicar todos os conceitos aprendidos
+
+Instruções:
+Crie um programa que:
+1. Pergunte o nome do usuário
+2. Pergunte o salário do usuário (pode ser decimal)
+3. Mostre:
+   a) Nome em maiúsculas
+   b) Quantas letras tem o nome
+   c) Salário com duas casas decimais
+   d) Salário formatado em reais
+
+Código base (complete e teste):
+-------------------------------------------------------------------------------
+let nome = prompt("Qual é o seu nome?")
+let salario = Number(prompt("Qual é o seu salário?"))
+
+document.write(`<h2>FICHA DO FUNCIONÁRIO</h2>`)
+document.write(`Nome: ${nome.toUpperCase()}<br>`)
+document.write(`Seu nome tem ${nome.length} letras<br>`)
+document.write(`Salário bruto: R$ ${salario.toFixed(2)}<br>`)
+
+let salarioFormatado = salario.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+})
+document.write(`Salário formatado: ${salarioFormatado}<br>`)
+-------------------------------------------------------------------------------
+
+
+================================================================================
+                        DICAS IMPORTANTES
+================================================================================
+
+1. O prompt() SEMPRE retorna uma string (texto), mesmo quando digita números
+   Por isso é necessário converter com Number(), parseInt() ou parseFloat()
+
+2. O operador + pode ser usado para:
+   - SOMAR: quando os dois lados são números
+   - CONCATENAR: quando pelo menos um lado é string
+
+3. Template strings (com crases ` `) facilitam a formatação:
+   - Não precisa ficar abrindo e fechando aspas
+   - Basta usar ${variável} para inserir valores
+
+4. ToLocaleString() é muito útil para formatar:
+   - Moeda (real, dólar, euro)
+   - Datas
+   - Números com separadores de milhar
+
+5. document.write() escreve diretamente no HTML
+   - Aceita tags HTML como <br>, <strong>, <h1>, etc.
+   - Para quebrar linha use <br> ou document.writeln()
+
+
+================================================================================
+                        MENSAGEM DO PROFESSOR
+================================================================================
+
+"Não adianta só assistir. Programação se aprende praticando!"
+
+- Crie seus próprios exemplos
+- Modifique os valores e teste diferentes entradas
+- Se errar, analise o erro e tente de novo
+- Anote tudo no caderno para consultar depois
+- Não pule exercícios - eles são essenciais para fixar o conteúdo
+
+
+================================================================================
+                              FIM DO RESUMO
+================================================================================
